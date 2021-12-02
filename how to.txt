@@ -1,0 +1,21 @@
+Showing the video
+{react component for one video}
+	video title
+	video embeded
+	show number of votes
+	button to remove video
+	
+	votes buton uP
+	votes button Down
+	
+	useState to have the values from JSON
+	useEffect to fetch the data into the JSON
+	
+{react component for Add another video}
+	one input to the title
+	one in[ut to the URL from YOUTUBE
+	one button to add the new video
+	
+	
+	
+
