@@ -1,11 +1,12 @@
 import "./App.css";
 import VideoCards from "./components/VideoCards";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Video Recommendation</h1>
+        <Navbar />
       </header>
       <VideoCards />
     </div>
