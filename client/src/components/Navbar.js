@@ -6,7 +6,7 @@ import AddVideo from "./AddVideo";
 const Navbar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
