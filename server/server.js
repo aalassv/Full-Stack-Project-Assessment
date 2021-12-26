@@ -44,7 +44,7 @@ app.delete("/videos/:id", (request, response) => {
   console.log(deleteById);
   //If the
   if (deleteById >= 0) {
-    data.splice(deleteById, 1);
+    data.splice(deleteById, 1); 
     response.status(200).send("Data deleted");
   } else {
     response.sendStatus(404);

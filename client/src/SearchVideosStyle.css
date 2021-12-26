@@ -1,0 +1,43 @@
+/* .searchDivInputs {
+    display: flex;
+    
+} */
+.searchInputs {
+  margin: 0;
+  display: flex;
+}
+/* 
+.search input {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  padding: 15px;
+  height: 30px;
+  width: 300px;
+} */
+
+.searchIcon {
+  height: 38px;
+  /* width: 50px; */
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+
+
+
+
+
+#clearBtn {
+  cursor: pointer;
+}

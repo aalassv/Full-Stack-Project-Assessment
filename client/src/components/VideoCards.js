@@ -4,7 +4,7 @@ import ReactPlayer from "react-player/youtube";
 //Render a Youtube video
 const VideoCards = () => {
   const [display, setDisplay] = useState([]);
-  const [afterDeletedVideos, setAfterDeletedVideos] = useState([]);
+  // const [afterDeletedVideos, setAfterDeletedVideos] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/videos/")
@@ -12,11 +12,9 @@ const VideoCards = () => {
       .then((data) => setDisplay(data));
   }, [display]);
 
-
-function handlerClick () {
-  
-}
-
+  function handlerClick() {
+    
+  }
 
   return (
     <div className="container">
@@ -24,23 +22,23 @@ function handlerClick () {
         <div className="row">
           {display.map((val) => (
             <div className="col-12 col-sm-6 col-xl-4  d-flex align-content-center flex-column  ">
-              <h5 className="m-0">{val.title}</h5>
+              <h5 className="">{val.title}</h5>
               <ReactPlayer
                 url={val.url}
                 controls="true"
-                width="370px"
+                width="320px"
                 height="210px"
               />
-              <div className=" d-flex align-items-left mt-2 mb-3">
-                <button type="button" className="btn btn-outline-primary me-1">
-                  <i className="bi-hand-thumbs-up"></i>
-                </button>
-                <div></div>
+              <div className=" d-flex align-items-left mt-3 mb-3 ">
                 <button
                   type="button"
-                  className="btn btn-outline-secondary me-4"
+                  className="btn btn-outline-primary position-relative me-5"
                 >
-                  {val.rating}
+                  <i className="bi-hand-thumbs-up"></i>
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {val.rating}  
+                    <span className="visually-hidden">unread messages</span>
+                  </span>
                 </button>
                 <span> </span>
                 <button type="button" className="btn btn-outline-danger me-1">
@@ -48,7 +46,7 @@ function handlerClick () {
                 </button>
                 <button
                   type="button"
-                  className="btn btn-outline-danger "
+                  className="btn btn-outline-secondary "
                   onClick={handlerClick}
                 >
                   <i className="bi bi-trash"></i>
