@@ -1,5 +1,5 @@
 import React from "react";
-import SearchVideos from "./SearchVideos";
+import RenderSearchVideos from "./SearchInput/RenderSearchVideos";
 import AddVideo from "./AddVideo";
 
 
@@ -32,7 +32,7 @@ const Navbar = () => {
               </div>
             </div>
             <form className="d-flex">
-              <SearchVideos />
+              <RenderSearchVideos />
             </form>
           </div>
         </div>

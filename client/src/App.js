@@ -1,5 +1,5 @@
 import "./App.css";
-import VideoCards from "./components/VideoCards";
+import VideoDisplay from "../src/components/VideoDisplay/VideoDisplay"
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <VideoCards />
+      <VideoDisplay />
     </div>
   );
 }

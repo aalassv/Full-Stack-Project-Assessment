@@ -1,28 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import RenderVideoDisplay from "./RenderVideoDisplay.js"
 import ReactPlayer from "react-player/youtube";
+//import SearchVideos from "../SearchInput/SearchVideos.js";
 
-//Render a Youtube video
-const VideoCards = () => {
-  const [display, setDisplay] = useState([]);
-  // const [afterDeletedVideos, setAfterDeletedVideos] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/videos/")
-      .then((Response) => Response.json())
-      .then((data) => setDisplay(data));
-  }, [display]);
-
-<<<<<<< HEAD
-  function handlerClick() {
-    
-  }
-=======
-
-  function handlerClick() {
-
-  }
-
->>>>>>> 4e1970bcae57ea45e8dcaba458160e54bf4a31be
+function VideoDisplay() {
+const { display } = RenderVideoDisplay();
+//const {displayedAtSearch} = SearchVideos();
 
   return (
     <div className="container">
@@ -37,29 +20,17 @@ const VideoCards = () => {
                 width="320px"
                 height="210px"
               />
-<<<<<<< HEAD
+
               <div className=" d-flex align-items-left mt-3 mb-3 ">
                 <button
                   type="button"
-                  className="btn btn-outline-primary position-relative me-5"
+                  className="btn btn-outline-primary position-relative me-3"
                 >
                   <i className="bi-hand-thumbs-up"></i>
                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {val.rating}  
+                    {val.rating}
                     <span className="visually-hidden">unread messages</span>
                   </span>
-=======
-              
-              <div className=" d-flex align-items-left mt-3 mb-3 " >
-
-                <button type="button" className="btn btn-outline-primary position-relative me-3">
-               
-                  <i className="bi-hand-thumbs-up"></i>
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {val.rating}
-                  <span className="visually-hidden">unread messages</span>
-                </span>
->>>>>>> 4e1970bcae57ea45e8dcaba458160e54bf4a31be
                 </button>
                 <button type="button" className="btn btn-outline-danger me-3">
                   <i className="bi-hand-thumbs-down"></i>
@@ -67,7 +38,7 @@ const VideoCards = () => {
                 <button
                   type="button"
                   className="btn btn-outline-secondary "
-                  onClick={handlerClick}
+                  // onClick={handlerClick}
                 >
                   <i className="bi bi-trash"></i>
                 </button>
@@ -78,6 +49,6 @@ const VideoCards = () => {
       </div>
     </div>
   );
-};
+}
 
-export default VideoCards;
+export default VideoDisplay;
