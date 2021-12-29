@@ -1,23 +1,23 @@
-import React from "react";
-import SearchVideos from "./SearchVideos";
+import RenderVideoDisplay from "../VideoDisplay/RenderVideoDisplay";
+import { useState } from "react";
 
-const RenderSearchVideos = () => {
-  const {handlerClick} = SearchVideos()
+function RenderSearchVideos() {
+  const { display } = RenderVideoDisplay();
+  const [displayedAtSearch, setDisplayedAtSearch] = useState([]);
+  //setDisplayedAtSearch(display);
 
-  return (
-    <>
-      <input
-        className="form-control me-2"
-        type="search"
-        placeholder="Search Videos"
-        aria-label="Search"
-        onChange={handlerClick}
-      />
-      {/* <button className="btn btn-outline-light" type="submit">
-        Search
-      </button> */}
-    </>
-  );
-};
+  function onChangeHandler(event) {
+    const searchWord = event.target.value;
+    console.log(searchWord);
+    const filterVideoDisplay = display.filter((value) => {
+      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    setDisplayedAtSearch(filterVideoDisplay);
+    console.log(setDisplayedAtSearch);
+  }
+
+  return { onChangeHandler, displayedAtSearch, setDisplayedAtSearch };
+}
 
 export default RenderSearchVideos;

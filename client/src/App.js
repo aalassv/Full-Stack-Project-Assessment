@@ -1,14 +1,17 @@
-import "./App.css";
-import VideoDisplay from "../src/components/VideoDisplay/VideoDisplay"
-import Navbar from "./components/Navbar";
+import MainContent from "./components/MainContent/MainContent";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import RenderApp from "./RenderApp";
 
 function App() {
+const {display} = RenderApp();
+console.log(display)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar />
-      </header>
-      <VideoDisplay />
+      <Header />
+      <MainContent />
+      <Footer/>
     </div>
   );
 }

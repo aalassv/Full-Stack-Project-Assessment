@@ -1,11 +1,11 @@
 import React from "react";
-import RenderSearchVideos from "./SearchInput/RenderSearchVideos";
-import AddVideo from "./AddVideo";
+import SearchVideos from "../SearchInput/SearchVideos"
+import AddVideo from "../AddVideo/AddVideo"
 
 
 const Navbar = () => {
   return (
-    <div>
+    <>
       <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
         <div className="container-fluid">
           <button
@@ -32,12 +32,12 @@ const Navbar = () => {
               </div>
             </div>
             <form className="d-flex">
-              <RenderSearchVideos />
+              <SearchVideos />
             </form>
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

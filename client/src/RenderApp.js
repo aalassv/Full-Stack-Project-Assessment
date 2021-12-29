@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function RenderVideoDisplay() {
+function RenderApp() {
   const [display, setDisplay] = useState([]);
 
   useEffect(() => {
@@ -12,4 +12,4 @@ function RenderVideoDisplay() {
   return { display };
 }
 
-export default RenderVideoDisplay;
+export default RenderApp;
