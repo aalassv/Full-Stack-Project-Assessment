@@ -1,8 +1,8 @@
 import React from "react";
 import RenderSearchVideos from "./RenderSearchVideos";
 
-const SearchVideos = () => {
-  const { onChangeHandler } = RenderSearchVideos();
+const SearchVideos = (props) => {
+  const { onChangeHandler, displayedAtSearch } = RenderSearchVideos();
 
   return (
     <>
@@ -26,6 +26,8 @@ const SearchVideos = () => {
           placeholder="Search Videos"
           aria-label="Input group example"
           aria-describedby="basic-addon1"
+          value={props.search("")}
+          onChange={onChangeHandler}
         />
       </div>
       {/* <input

@@ -1,14 +1,18 @@
 import React from "react";
-//import RenderMainContent from './RenderMainContent'
+import RenderMainContent from './RenderMainContent'
 import VideoDisplay from "../VideoDisplay/VideoDisplay";
-//import VideoFrame from "../VideoFrame/VideoFrame"
+import FunctionalNavbar from "../FunctionalNavbar/FunctionalNavbar";
 
 function MainContent() {
+const { videos, search } = RenderMainContent();
+
+
   return (
     <>
       <main>
-        <VideoDisplay />
-        {/* <VideoFrame /> */}
+        <FunctionalNavbar display={videos} search={search}/>
+        <VideoDisplay videos={videos}/>
+        {/* <VideoFrame videos={videos} /> */}
       </main>
     </>
   );

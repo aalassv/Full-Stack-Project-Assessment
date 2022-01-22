@@ -1,22 +1,18 @@
-
-
-// <ReactPlayer url={val.url} controls="true" width="320px" height="210px" />;
-
 import React from 'react'
+//import MainContent from "../MainContent/RenderMainContent"
+import ReactPlayer from 'react-player';
 
-function VideoFrame() {
+function VideoFrame (props) {
+
     return (
       <>
-        {/* <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/{props.video}"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        ; */}
+        <h5 className="">{props.videos.title}</h5>
+        <ReactPlayer
+          url={props.videos.url}
+          controls="true"
+          width="320px"
+          height="210px"
+        />
       </>
     );
 }

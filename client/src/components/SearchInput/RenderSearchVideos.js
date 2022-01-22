@@ -1,15 +1,15 @@
 import RenderVideoDisplay from "../VideoDisplay/RenderVideoDisplay";
 import { useState } from "react";
 
-function RenderSearchVideos() {
-  const { display } = RenderVideoDisplay();
+function RenderSearchVideos(props) {
+  
   const [displayedAtSearch, setDisplayedAtSearch] = useState([]);
   //setDisplayedAtSearch(display);
 
   function onChangeHandler(event) {
     const searchWord = event.target.value;
     console.log(searchWord);
-    const filterVideoDisplay = display.filter((value) => {
+    const filterVideoDisplay = props.display.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
 
